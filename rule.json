@@ -1,0 +1,76 @@
+{
+  "VAELoader": {
+    "vae_name": {
+      "vae-ft-mse-840000-ema-pruned.ckpt": 0
+    }
+  },
+  "CheckpointLoaderSimple": {
+    "ckpt_name": {
+      "realisticVisionV51_v51VAE.safetensors": 10
+    }
+  },
+  "ControlNetLoader": {
+    "control_net_name": {
+      "control_v11f1e_sd15_tile.pth": 50,
+      "control_v11e_sd15_ip2p.pth": 51,
+      "control_v11f1p_sd15_depth.pth": 52,
+      "control_v11p_sd15_canny.pth": 53,
+      "control_v11p_sd15_lineart.pth": 55,
+      "control_v11p_sd15_normalbae.pth": 56,
+      "control_v11p_sd15_openpose.pth": 57,
+      "control_v11p_sd15_seg.pth": 58,
+      "control_v11p_sd15_softedge.pth": 59,
+      "t2iadapter_openpose_sd14v1.pth": 60,
+      "t2iadapter_seg_sd14v1.pth": 61,
+      "t2iadapter_depth_sd14v1.pth": 62,
+      "t2iadapter_sketch_sd14v1.pth": 63,
+      "t2iadapter_keypose_sd14v1.pth": 64,
+      "t2iadapter_color_sd14v1.pth": 65,
+      "t2iadapter_canny_sd14v1.pth": 66,
+      "t2iadapter_style_sd14v1.pth": 67
+    }
+  },
+  "IPAdapterModelLoader": {
+    "ipadapter_file": {
+      "ip-adapter-plus_sd15.bin": 100,
+      "ip-adapter-plus-face_sd15.bin": 101,
+      "ip-adapter-full-face_sd15.bin": 102,
+      "ip-adapter_sdxl.bin": 103,
+      "ip-adapter_sdxl_vit-h.bin": 104,
+      "ip-adapter-plus_sdxl_vit-h.bin": 105,
+      "ip-adapter-plus-face_sdxl_vit-h.bin": 106
+    }
+  },
+  "FaceRestoreModelLoader": {
+    "model_name": {
+      "GFPGANv1.4.pth": 115
+    }
+  },
+  "UltralyticsDetectorProvider": {
+    "model_name": {
+      "bbox/face_yolov8m.pt": 130,
+      "segm/face_yolov8m-seg_60.pt": 131
+    }
+  },
+  "SAMLoader": {
+    "model_name": {
+      "sam_vit_b_01ec64.pth": 150,
+      "sam_vit_h_4b8939.pth": 151
+    }
+  },
+  "CLIPVisionLoader": {
+    "clip_name": {
+      "model.safetensors": 160
+    }
+  },
+  "DWPreprocessor": {
+    "bbox_detector": {
+      "yolox_l.onnx": 170
+    }
+  },
+  "LoraLoader": {
+    "lora_name": {
+      "lcm_lora_sd15.safetensors": 500
+    }
+  }
+}
