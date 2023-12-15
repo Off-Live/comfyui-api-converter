@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from prompt import convert_to_api
 from id_refactor import apply_id_offset, apply_rule
 import json 
@@ -6,10 +7,12 @@ import sys
 import boto3
 
 app = Flask(__name__)
+CORS(app)
 
 data = {"name": "simple comfyui workflow converter"}
 url = 'http://127.0.0.1:8188/'
 port = 3003
+
 
 @app.route('/api/test')
 def download_and_update_rule():
@@ -51,8 +54,8 @@ def update_rule():
     download_and_update_rule()
     return jsonify({"status":"ok"})
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     if len(sys.argv)==3:
         url = sys.argv[1]
         port = int(sys.argv[2])
