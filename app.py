@@ -13,8 +13,7 @@ data = {"name": "simple comfyui workflow converter"}
 url = 'http://127.0.0.1:8188/'
 port = 3003
 
-
-@app.route('/api/test')
+ 
 def download_and_update_rule():
   print("Downloading rule from S3...")
   s3 = boto3.client('s3')
