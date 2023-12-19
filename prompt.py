@@ -14,8 +14,8 @@ def convert_to_api(json_obj, url):
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
 
-    wait = WebDriverWait(driver,10)
-    wait.until(lambda driver: driver.execute_script("return typeof app !== 'undefined' && app !==null"))
+    wait = WebDriverWait(driver, 10)
+    wait.until(lambda web_driver: web_driver.execute_script("return typeof app !== 'undefined' && app !==null"))
 
     wf_string = json.dumps(json_obj)
     driver.execute_script(f'app.loadGraphData({wf_string})')
