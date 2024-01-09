@@ -41,7 +41,6 @@ RUN cd /root/ComfyUI/custom_nodes \
     && git clone https://github.com/mav-rik/facerestore_cf/
 
 # update custom nodes
-# COPY impact-pack.ini /root/ComfyUI/custom_nodes/ComfyUI-Impact-Pack/
 RUN cd /root/ComfyUI/custom_nodes/ComfyUI-Impact-Pack && git submodule update --init --recursive && python install.py
 RUN cd /root/ComfyUI/custom_nodes/was-node-suite-comfyui && pip install -r requirements.txt
 RUN cd /root/ComfyUI/custom_nodes/comfyui_controlnet_aux && echo "\nonnxruntime-gpu" >> requirements.txt && pip install -r requirements.txt
