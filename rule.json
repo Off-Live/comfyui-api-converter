@@ -27,7 +27,8 @@
       "t2iadapter_keypose_sd14v1.pth": 64,
       "t2iadapter_color_sd14v1.pth": 65,
       "t2iadapter_canny_sd14v1.pth": 66,
-      "t2iadapter_style_sd14v1.pth": 67
+      "t2iadapter_style_sd14v1.pth": 67,
+      "control_v11p_sd15_inpaint_fp16.safetensors" : 68
     }
   },
   "IPAdapterModelLoader": {
