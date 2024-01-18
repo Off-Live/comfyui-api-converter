@@ -1,0 +1,18 @@
+services:
+
+  converter:
+    build:
+      dockerfile: build.Dockerfile
+    image: comfyui-api-converter
+    # image: offdev/comfyui-api-converter
+    ports:
+      - "3003:3003"
+    volumes:
+      - ../models:/runpod-volume
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

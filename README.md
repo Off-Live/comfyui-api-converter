@@ -3,7 +3,7 @@ This project can convert the comfy's workflow to its api json format.
 
 ### Build
 ```shell
-docker build -t comfyui-api-converter -f build.Dockerfile .
+docker compose build --pull --no-cache
 ```
 
 ### Deploy
